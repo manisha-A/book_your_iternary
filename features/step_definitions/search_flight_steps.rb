@@ -11,11 +11,10 @@ When(/^I search one way flight between "(.*?)" and "(.*?)" for today for (\d+) a
   homepage.select_departure_date
   homepage.select_no_of_adults(no_of_adults)
   homepage.search_flights
-  sleep 15
+  sleep 5
 end
 
 Then(/^I should be able to view available flight options$/) do
-  assert page.has_content?('Total Results:'),"error"
+  homepage.should_be_on_result_tab
   assert_text('Total Results:')
-  #find('#flight_results').text.has_content?("Total Results:")
 end

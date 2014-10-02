@@ -22,28 +22,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HomePage.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HomePage.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/pages/HomePage.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="38" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+            <state line="18" column="25" selection-start="353" selection-end="353" vertical-scroll-proportion="0.03301887" vertical-offset="249" max-vertical-offset="885">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="22" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search_flight_steps.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="search_flight_steps.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/step_definitions/search_flight_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="25" selection-start="449" selection-end="449" vertical-scroll-proportion="0.28892455" vertical-offset="0" max-vertical-offset="623">
+            <state line="10" column="30" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
@@ -80,9 +71,9 @@
         <option value="$PROJECT_DIR$/features/support/page_support.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/features/support/env.rb" />
-        <option value="$PROJECT_DIR$/features/pages/HomePage.rb" />
         <option value="$PROJECT_DIR$/features/search_flight.feature" />
         <option value="$PROJECT_DIR$/features/step_definitions/search_flight_steps.rb" />
+        <option value="$PROJECT_DIR$/features/pages/HomePage.rb" />
       </list>
     </option>
   </component>
@@ -212,6 +203,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Sportec/turnstile" />
+    <property name="LayoutCode.rearrangeEntriesRuby" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
@@ -524,13 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/features/support/env.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="12" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
@@ -538,9 +523,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/pages/HomePage.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="38" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+        <state line="6" column="22" selection-start="169" selection-end="169" vertical-scroll-proportion="0.14150943" vertical-offset="0" max-vertical-offset="636">
           <folding />
         </state>
       </provider>
@@ -554,7 +539,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/step_definitions/search_flight_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="449" selection-end="449" vertical-scroll-proportion="0.28892455" vertical-offset="0" max-vertical-offset="623">
+        <state line="10" column="30" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/pages/HomePage.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="25" selection-start="353" selection-end="353" vertical-scroll-proportion="0.03301887" vertical-offset="249" max-vertical-offset="885">
           <folding />
         </state>
       </provider>

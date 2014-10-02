@@ -16,15 +16,24 @@ class HomePage < Page
   end
 
   def select_departure_date
+    #tom = Date.today + 1
+    #p tom
+    #binding.pry
     @session.fill_in('form_startdate', :with => Date.today)
   end
 
   def select_source(source)
+    @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("focus") }
     @session.fill_in('form_city_from',:with => source)
+    @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("keydown") }
+    sleep 2
   end
 
   def select_destination(destination)
+    @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("focus") }
     @session.fill_in('form_city',:with => destination)
+    @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("keydown") }
+    sleep 1
   end
 
   def search_flights
@@ -33,5 +42,13 @@ class HomePage < Page
 
   def should_be_on_home_page
     @session.text.include? "Flight Search"
+  end
+
+  def should_be_on_result_tab
+    if (@session.find('#flight_results').text.include? "Total Results:")
+    else
+      @session.find('#flight_results').text.include? "No Results Found"
+      p "There are no flights available"
+    end
   end
 end
