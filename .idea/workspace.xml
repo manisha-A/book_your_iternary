@@ -22,10 +22,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HomePage.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HomePage.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/pages/HomePage.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="25" selection-start="353" selection-end="353" vertical-scroll-proportion="0.03301887" vertical-offset="249" max-vertical-offset="885">
+            <state line="50" column="9" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="900">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page_support.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/features/support/page_support.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="5" selection-start="222" selection-end="222" vertical-scroll-proportion="0.30660376" vertical-offset="0" max-vertical-offset="636">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="22" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
@@ -34,16 +52,7 @@
       <file leaf-file-name="search_flight_steps.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/step_definitions/search_flight_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="30" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search_flight.feature" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/features/search_flight.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="64" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+            <state line="11" column="25" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
@@ -52,7 +61,7 @@
       <file leaf-file-name="env.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/support/env.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="12" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="9" column="31" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
@@ -68,12 +77,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/features/support/page_support.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/features/support/env.rb" />
         <option value="$PROJECT_DIR$/features/search_flight.feature" />
-        <option value="$PROJECT_DIR$/features/step_definitions/search_flight_steps.rb" />
         <option value="$PROJECT_DIR$/features/pages/HomePage.rb" />
+        <option value="$PROJECT_DIR$/features/step_definitions/search_flight_steps.rb" />
+        <option value="$PROJECT_DIR$/features/support/page_support.rb" />
       </list>
     </option>
   </component>
@@ -509,27 +518,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/support/page_support.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.28301886" vertical-offset="0" max-vertical-offset="636">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features/support/env.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="169" selection-end="169" vertical-scroll-proportion="0.14150943" vertical-offset="0" max-vertical-offset="636">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/features/search_flight.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="64" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
@@ -537,16 +525,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/step_definitions/search_flight_steps.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+        <state line="6" column="22" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Ruby/Gems/2.0.0/gems/capybara-2.4.3/lib/capybara.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="360" column="21" selection-start="11360" selection-end="11364" vertical-scroll-proportion="0.42211056" vertical-offset="5148" max-vertical-offset="5745">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/support/env.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs20/kernel.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1630" column="8" selection-start="71248" selection-end="71248" vertical-scroll-proportion="0.89406097" vertical-offset="23893" max-vertical-offset="31305">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/pages/HomePage.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="25" selection-start="353" selection-end="353" vertical-scroll-proportion="0.03301887" vertical-offset="249" max-vertical-offset="885">
+        <state line="50" column="9" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/search_flight_steps.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="25" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/support/page_support.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="5" selection-start="222" selection-end="222" vertical-scroll-proportion="0.30660376" vertical-offset="0" max-vertical-offset="636">
           <folding />
         </state>
       </provider>

@@ -1,5 +1,3 @@
-require 'Capybara/cucumber'
-
 class HomePage < Page
 
   def initialize(session,world)
@@ -45,10 +43,13 @@ class HomePage < Page
   end
 
   def should_be_on_result_tab
-    if (@session.find('#flight_results').text.include? "Total Results:")
-    else
-      @session.find('#flight_results').text.include? "No Results Found"
-      p "There are no flights available"
+    until(@session.find('#flight_results').visible?)do
+      if (@session.find('#flight_results').text.include? "Total Results:")
+      else
+        @session.find('#flight_results').text.include? "No Results Found"
+        p "There are no flights available"
+      end
     end
+
   end
 end
