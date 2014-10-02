@@ -1,6 +1,5 @@
 class Page
-  def initialize(capybara)
-    @capybara = capybara
+  def initialize()
     @session = capybara.current_session
   end
 end

@@ -4,10 +4,10 @@ Given(/^I am on home page$/) do
   homepage.navigateToHomePage
 end
 
-When(/^I search one way flight between "(.*?)" and "(.*?)"$/) do |source, destination|
+When(/^I search one way flight between "(.*?)" and "(.*?)" for (\d+) adults$/) do |source, destination, no_of_adults|
   homepage.select_source(source)
   homepage.select_destination(destination)
-  homepage.select_no_of_adults(2)
+  homepage.select_no_of_adults(no_of_adults)
   homepage.search_flights
   sleep 15
 end
