@@ -1,14 +1,14 @@
 require 'selenium-webdriver'
 
 Given(/^I am on home page$/) do
-  visit Capybara.app_host
+  HomePage.new(Capybara.current_session).navigateToHomePage
 end
 
 When(/^I search one way flight between "(.*?)" and "(.*?)"$/) do |source, destination|
-  fill_in('form_city_from',:with => source)
-  fill_in('form_city',:with => destination)
-  select(2 , :from =>'form_adults')
-  click_button('Search')
+  HomePage.new(Capybara.current_session).select_source(source)
+  HomePage.new(Capybara.current_session).select_destination(destination)
+  HomePage.new(Capybara.current_session).select_no_of_adults(2)
+  HomePage.new(Capybara.current_session).search_flights
   sleep 15
 end
 
