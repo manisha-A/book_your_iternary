@@ -8,6 +8,7 @@ class HomePage < Page
 
   def navigateToHomePage
     @session.visit ('/')
+    should_be_on_home_page
   end
 
   def select_no_of_adults(no_of_adults)
@@ -23,6 +24,10 @@ class HomePage < Page
   end
 
   def search_flights
-      @session.click_button('Search')
+    @session.click_button('Search')
+  end
+
+  def should_be_on_home_page
+    @session.text.include? "Flight Search"
   end
 end

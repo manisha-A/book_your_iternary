@@ -2,6 +2,7 @@ require 'selenium-webdriver'
 
 Given(/^I am on home page$/) do
   homepage.navigateToHomePage
+  #page.should have_content("Flight Search")
 end
 
 When(/^I search one way flight between "(.*?)" and "(.*?)" for (\d+) adults$/) do |source, destination, no_of_adults|

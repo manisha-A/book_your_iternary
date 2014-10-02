@@ -1,4 +1,6 @@
 require 'Capybara/cucumber'
+require 'rspec/expectations'
+require 'pry'
 
 screenshot_path = File.expand_path('../../features/test_report', File.dirname(__FILE__)) + '/screenshot_'+ Time.now.strftime("%H:%M:%S") + '.png'
 
