@@ -1,9 +1,7 @@
 require 'selenium-webdriver'
 
-
 Given(/^I am on home page$/) do
-  @browser = Selenium::WebDriver.for(:firefox)
-  @browser.navigate.to "http://travelfusion.com"
+  visit Capybara.app_host
 end
 
 When(/^I search one way flight between "(.*?)" and "(.*?)"$/) do |arg1, arg2|
