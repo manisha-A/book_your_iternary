@@ -4,6 +4,7 @@ screenshot_path = File.expand_path('../../features/test_report', File.dirname(__
 
 Capybara.configure do |config|
   config.default_driver = :selenium
+  config.app_host = "http://travelfusion.com"
   config.default_wait_time = 10
 end
 

@@ -1,13 +1,13 @@
 require 'Capybara/cucumber'
 
-class HomePage
+class HomePage < Page
 
-  def initialize(session)
+  def initialize(session,world)
     @session = session
   end
 
   def navigateToHomePage
-    @session.visit "http://travelfusion.com"
+    @session.visit ('/')
   end
 
   def select_no_of_adults(no_of_adults)
