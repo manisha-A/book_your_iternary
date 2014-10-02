@@ -15,6 +15,10 @@ class HomePage < Page
     @session.select(no_of_adults, from: 'form_adults')
   end
 
+  def select_departure_date
+    @session.fill_in('form_startdate', :with => Date.today)
+  end
+
   def select_source(source)
     @session.fill_in('form_city_from',:with => source)
   end
