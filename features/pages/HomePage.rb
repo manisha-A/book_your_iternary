@@ -14,24 +14,15 @@ class HomePage < Page
   end
 
   def select_departure_date
-    #tom = Date.today + 1
-    #p tom
-    #binding.pry
     @session.fill_in('form_startdate', :with => Date.today)
   end
 
   def select_source(source)
-    @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("focus") }
-    @session.fill_in('form_city_from',:with => source)
-    @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("keydown") }
-    sleep 2
+    fill_in_city("form_city_from",source)
   end
 
   def select_destination(destination)
-    @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("focus") }
-    @session.fill_in('form_city',:with => destination)
-    @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("keydown") }
-    sleep 1
+    fill_in_city("form_city",destination)
   end
 
   def search_flights
@@ -50,6 +41,13 @@ class HomePage < Page
         p "There are no flights available"
       end
     end
+  end
 
+  private
+  def fill_in_city(selector, airport)
+    @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("focus") }
+    @session.fill_in("#{selector}", :with => airport)
+    @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("keydown") }
+    sleep 2
   end
 end
