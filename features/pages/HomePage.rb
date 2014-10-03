@@ -30,12 +30,13 @@ class HomePage < Page
   end
 
   def should_be_on_home_page
+    verify_active_tab("Search")
     @session.text.include? "Flight Search"
   end
 
   def should_be_on_result_tab
     result_content = "#flight_results"
-    verify_active_tab.text == "Results"
+    verify_active_tab("Results")
     wait_for_element_to_be_present(result_content)
 
     if (@session.find('#content_field').text == "No Results Found")
@@ -45,8 +46,8 @@ class HomePage < Page
     end
   end
 
-  def verify_active_tab
-    @session.find('#flight_breadcrumbs .active')
+  def verify_active_tab(tab_name)
+    @session.find('#flight_breadcrumbs .active').text.should == tab_name
   end
 
   def verify_minimum_adults

@@ -2,7 +2,6 @@ require 'selenium-webdriver'
 
 Given(/^I am on home page$/) do
   homepage.navigate_to_home_page
-  homepage.verify_active_tab.text == "Search"
 end
 
 When(/^I search one way flight between "(.*?)" and "(.*?)" for today for (\d+) adults$/) do |source, destination, no_of_adults|
