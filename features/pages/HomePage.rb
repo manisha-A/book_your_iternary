@@ -49,12 +49,21 @@ class HomePage < Page
     @session.find('#flight_breadcrumbs .active')
   end
 
+  def verify_minimum_adults
+    message_for_minimum_no_adult = "Select at least one passenger OK"
+    verify_message(".fancybox-inner",message_for_minimum_no_adult)
+  end
+
   private
   def fill_in_city(selector, airport)
     @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("focus") }
     @session.fill_in("#{selector}", :with => airport)
     @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("keydown") }
     sleep 2
+  end
+
+  def verify_message(selector,message)
+    @session.find("#{selector}").text.should == message
   end
 
   def wait_for_element_to_be_present(selector)

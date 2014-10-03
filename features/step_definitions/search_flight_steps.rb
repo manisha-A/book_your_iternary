@@ -18,4 +18,5 @@ Then(/^I should be able to view available flight options$/) do
 end
 
 Then(/^I should see appropriate message to select atleast one adult$/) do
+  homepage.verify_minimum_adults
 end
