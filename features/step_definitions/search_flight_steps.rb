@@ -1,5 +1,3 @@
-require 'selenium-webdriver'
-
 Given(/^I am on home page$/) do
   homepage.navigate_to_home_page
 end

@@ -1,4 +1,5 @@
 class HomePage < Page
+  include RSpec::Matchers
 
   def initialize(session, world)
     @session = session
@@ -40,14 +41,14 @@ class HomePage < Page
     wait_for_element_to_be_present(result_content)
 
     if (@session.find('#content_field').text == "No Results Found")
-      (@session.find('#flight_results').text.include? "Total Results:").should == false
+      expect((@session.find('#flight_results').text.include? "Total Results:")).to eq(false)
     else
-      (@session.find('#flight_results').text.include? "Total Results:").should == true
+      expect(@session.find('#flight_results').text.include? "Total Results:").to eq(true)
     end
   end
 
   def verify_active_tab(tab_name)
-    @session.find('#flight_breadcrumbs .active').text.should == tab_name
+    expect(@session.find('#flight_breadcrumbs .active').text).to eq(tab_name)
   end
 
   def verify_minimum_adults
@@ -64,7 +65,7 @@ class HomePage < Page
   end
 
   def verify_message(selector,message)
-    @session.find("#{selector}").text.should == message
+    expect(@session.find("#{selector}").text).to eq(message)
   end
 
   def wait_for_element_to_be_present(selector)

@@ -11,12 +11,6 @@ Capybara.configure do |config|
   config.default_wait_time = 10
 end
 
-RSpec.configure do |config|
-  config.expect_with :rspec do |c|
-    c.syntax = [:should]
-  end
-end
-
 After do |scenario|
   if scenario.failed?
     save_screenshot screenshot_path
