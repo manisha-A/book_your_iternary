@@ -1,6 +1,4 @@
 class HomePage < Page
-  include RSpec::Matchers
-
   def initialize(session, world)
     @session = session
   end
@@ -35,21 +33,21 @@ class HomePage < Page
     @session.text.include? "Flight Search"
   end
 
-  def should_be_on_result_tab
-    result_content = "#flight_results"
-    verify_active_tab("Results")
-    wait_for_element_to_be_present(result_content)
+  #def should_be_on_result_tab
+  #  result_content = "#flight_results"
+  #  verify_active_tab("Results")
+  #  wait_for_element_to_be_present(result_content)
+  #
+  #  if (@session.find('#content_field').text == "No Results Found")
+  #    expect((@session.find('#flight_results').text.include? "Total Results:")).to eq(false)
+  #  else
+  #    expect(@session.find('#flight_results').text.include? "Total Results:").to eq(true)
+  #  end
+  #end
 
-    if (@session.find('#content_field').text == "No Results Found")
-      expect((@session.find('#flight_results').text.include? "Total Results:")).to eq(false)
-    else
-      expect(@session.find('#flight_results').text.include? "Total Results:").to eq(true)
-    end
-  end
-
-  def verify_active_tab(tab_name)
-    expect(@session.find('#flight_breadcrumbs .active').text).to eq(tab_name)
-  end
+  #def verify_active_tab(tab_name)
+  #  expect(@session.find('#flight_breadcrumbs .active').text).to eq(tab_name)
+  #end
 
   def verify_minimum_adults
     message_for_minimum_no_adult = "Select at least one passenger OK"
@@ -61,17 +59,11 @@ class HomePage < Page
     @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("focus") }
     @session.fill_in("#{selector}", :with => airport)
     @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("keydown") }
-    sleep 2
+    sleep 1
   end
 
   def verify_message(selector,message)
     expect(@session.find("#{selector}").text).to eq(message)
-  end
-
-  def wait_for_element_to_be_present(selector)
-    if(@session.has_css?("#{selector}"))
-      sleep 4
-    end
   end
 
 end

@@ -11,7 +11,7 @@ When(/^I search one way flight between "(.*?)" and "(.*?)" for today for (\d+) a
 end
 
 Then(/^I should be able to view available flight options$/) do
-  homepage.should_be_on_result_tab
+  resultpage.should_be_on_result_tab
 end
 
 Then(/^I should see appropriate message to select atleast one adult$/) do
