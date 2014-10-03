@@ -1,10 +1,10 @@
 class HomePage < Page
 
-  def initialize(session,world)
+  def initialize(session, world)
     @session = session
   end
 
-  def navigateToHomePage
+  def navigate_to_home_page
     @session.visit ('/')
     should_be_on_home_page
   end
@@ -18,11 +18,11 @@ class HomePage < Page
   end
 
   def select_source(source)
-    fill_in_city("form_city_from",source)
+    fill_in_city("form_city_from", source)
   end
 
   def select_destination(destination)
-    fill_in_city("form_city",destination)
+    fill_in_city("form_city", destination)
   end
 
   def search_flights
@@ -34,13 +34,19 @@ class HomePage < Page
   end
 
   def should_be_on_result_tab
-    until(@session.find('#flight_results').visible?)do
-      if (@session.find('#flight_results').text.include? "Total Results:")
-      else
-        @session.find('#flight_results').text.include? "No Results Found"
-        p "There are no flights available"
-      end
+    result_content = "#flight_results"
+    verify_active_tab.text == "Results"
+    wait_for_element_to_be_present(result_content)
+
+    if (@session.find('#content_field').text == "No Results Found")
+      (@session.find('#flight_results').text.include? "Total Results:").should == false
+    else
+      (@session.find('#flight_results').text.include? "Total Results:").should == true
     end
+  end
+
+  def verify_active_tab
+    @session.find('#flight_breadcrumbs .active')
   end
 
   private
@@ -50,4 +56,11 @@ class HomePage < Page
     @session.driver.browser.execute_script %Q{ $('input[data-autocomplete]').trigger("keydown") }
     sleep 2
   end
+
+  def wait_for_element_to_be_present(selector)
+    if(@session.has_css?("#{selector}"))
+      sleep 4
+    end
+  end
+
 end
