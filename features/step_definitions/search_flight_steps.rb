@@ -10,7 +10,7 @@ When(/^I search one way flight between "(.*?)" and "(.*?)" for today for (\d+) a
   homepage.search_flights
 end
 
-Then(/^I should be able to view available flight options$/) do
+Then(/^I should be on results page$/) do
   resultpage.should_be_on_result_tab
 end
 

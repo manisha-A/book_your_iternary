@@ -10,9 +10,11 @@ class Page
   end
 
   def wait_for_element_to_be_present(selector)
-    if(@session.has_css?("#{selector}"))
-      sleep 4
-    end
+    #if(@session.has_css?("#{selector}"))
+    @session.should have_content(@session.find("#{selector}").text)
+      #@session.find("#{selector}",match: :first)
+      #expect(page).to have_field("Username", with: "Joe")
+    #end
   end
 end
 
